@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header_container{
+    background-color: yellow;
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.texto{
+    height: 2rem;
+    width: 27rem;
+}
+
+.buscar{
+    height: 2rem;
+    width: 5rem;
+    background-color: white;
+    font-size: .9rem;
+    border: 1px solid rgba(0, 0, 0, 0.171);
+}
+
+.container{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+.card_container{
+    border: 1px solid black;
+    height: 13rem;
+    margin: 2rem 0;
+    display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 1em 1em; 
+  grid-template-areas: 
+    "card_img card_titulo card_titulo card_cash"
+    "card_img card_sellet card_sellet card_cash"; 
+}
+
+.card_img { 
+    grid-area: card_img;
+    display: flex;
+    width: 12rem;
+    height: 12rem;
+    padding-top: .5rem;
+}
+
+img{
+    width: 5rem;
+    padding: 0 1rem;
+    object-fit: cover;
+    width: 12rem;
+    height: 12rem;
+}
+.card_titulo {
+    grid-area: card_titulo;
+}
+.card_titulo h2{
+     font-weight: 600;
+     padding: .5rem 0;
+     font-size: 1.3rem;
+}
+
+.card_titulo p{
+    font-size: 1rem;
+}
+.card_sellet {
+    grid-area: card_sellet;
+    display: flex;
+    align-items: center; 
+}
+
+.card_sellet p{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.card_cash {
+    grid-area: card_cash;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 2rem;
+}
+
+.card_cash p{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
