@@ -12,6 +12,9 @@ function main() {
             const container = document.querySelector('.container');
             removeChildNode(container)
             let elementoBuscado = e.target.elementoBuscado.value;
+            if(elementoBuscado.search(' ')){
+                return elementoBuscado.replace(' ', '-')
+            }
             const respuesta = await fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${elementoBuscado}`);
             const datos = await respuesta.json();
             console.log(datos.results)
