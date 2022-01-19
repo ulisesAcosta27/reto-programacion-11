@@ -1,5 +1,4 @@
 function main() {
-
     function removeChildNode(parent){
         while (parent.firstChild) {
             parent.removeChild(parent.firstChild)
@@ -12,7 +11,7 @@ function main() {
             const container = document.querySelector('.container');
             removeChildNode(container)
             let elementoBuscado = e.target.elementoBuscado.value;
-            if(elementoBuscado.search(' ')){
+            if(elementoBuscado.search()){
                 return elementoBuscado.replace(' ', '-')
             }
             const respuesta = await fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${elementoBuscado}`);
